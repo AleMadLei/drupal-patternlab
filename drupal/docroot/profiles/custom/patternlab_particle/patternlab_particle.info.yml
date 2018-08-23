@@ -1,0 +1,15 @@
+name: 'Patternlab Using Particle'
+description: 'A custom configuration using the Particle system for theming.'
+type: profile
+version: 8.x
+core: '8.x'
+dependencies:
+  - block
+  - contextual
+  - components
+  - d8_patternlab_sample_data_types
+  - features
+  - toolbar
+themes:
+  - bartik
+  - seven
