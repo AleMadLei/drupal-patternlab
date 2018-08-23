@@ -14,8 +14,20 @@ services:
       - ./data/mariadb:/var/lib/mysql
 
   php:
-    image: wodby/drupal-php:$PHP_TAG
+    build:
+      dockerfile: custom-php-node.dockerfile
+      context: .
+      args:
+        NODE_TAG: "${NODE_TAG}"
+        PHP_TAG: "${PHP_TAG}"
     container_name: "${PROJECT_NAME}_php"
+    ports:
+      - "3000:3000"
+    labels:
+      - 'traefik.backend=node'
+      - 'traefik.port=3000'
+      - 'traefik.frontend.rule=Host:node.${PROJECT_BASE_URL}'
+
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST: $DB_HOST
