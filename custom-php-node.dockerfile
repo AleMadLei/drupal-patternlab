@@ -14,6 +14,7 @@ ENV NODE_VERSION 8.11.4
 
 RUN \
     apk add --no-cache \
+        vim \
         libstdc++ \
     && apk add --no-cache --virtual .build-deps \
         binutils-gold \

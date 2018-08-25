@@ -26,7 +26,7 @@ services:
     labels:
       - 'traefik.backend=node'
       - 'traefik.port=3000'
-      - 'traefik.frontend.rule=Host:node.${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL},Host:node.${PROJECT_BASE_URL}'
 
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
@@ -35,6 +35,12 @@ services:
       DB_PASSWORD: $DB_PASSWORD
       DB_NAME: $DB_NAME
       DB_DRIVER: $DB_DRIVER
+      PHP_ERROR_REPORTING: E_ALL
+      PHP_DISPLAY_ERRORS: 1
+      PHP_DISPLAY_STARTUP_ERRORS: 1
+      PHP_TRACK_ERRORS: 1
+      PHP_FPM_LOG_LEVEL: error
+
     volumes:
       - ./:/var/www/html:cached
 
