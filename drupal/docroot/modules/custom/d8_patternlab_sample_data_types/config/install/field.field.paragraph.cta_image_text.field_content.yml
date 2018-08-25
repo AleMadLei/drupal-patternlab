@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.cta_image_text
+  module:
+    - text
+id: paragraph.cta_image_text.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: cta_image_text
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

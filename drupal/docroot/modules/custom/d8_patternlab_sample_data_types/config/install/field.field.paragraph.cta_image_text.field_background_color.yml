@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.cta_image_text
+  module:
+    - color_field
+id: paragraph.cta_image_text.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: cta_image_text
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type
