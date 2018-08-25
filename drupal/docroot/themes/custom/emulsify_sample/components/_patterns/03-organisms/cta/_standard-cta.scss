@@ -1,0 +1,32 @@
+.cta {
+  background-size: cover;
+  background-position: center center;
+  padding: 5px 20px 15px;
+  text-align: center;
+}
+
+.cta__icon-wrapper {
+  margin: 0 0 1em;
+}
+
+.cta__headline {
+  font-weight: 600;
+
+  @include size(40);
+
+  img {
+    margin-left: 5px;
+    max-height: 30px;
+    vertical-align: top;
+  }
+}
+
+.cta__subheadline {
+  font-weight: 300;
+
+  @include size(30);
+}
+
+.cta__icon {
+  max-width: 128px;
+}

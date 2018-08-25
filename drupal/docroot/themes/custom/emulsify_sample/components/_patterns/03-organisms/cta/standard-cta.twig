@@ -1,0 +1,19 @@
+<div class="cta">
+  <div class="cta__icon-wrapper">
+  {% include '@atoms/01-links/link/link.twig' with {
+    link_base_class: 'icon-link',
+    link_blockname: 'cta',
+    link_content: icon,
+    link_url: url,
+  } %}
+  </div>
+  {% include '@atoms/02-text/00-headings/_heading.twig' with {
+    heading_level: 2,
+    heading_base_class: 'headline',
+    heading_blockname: 'cta',
+    heading: headline,
+  } %}
+  <div {{ bem('subheadline', {}, 'cta') }}>
+    {{ subheadline }}
+  </div>
+</div>

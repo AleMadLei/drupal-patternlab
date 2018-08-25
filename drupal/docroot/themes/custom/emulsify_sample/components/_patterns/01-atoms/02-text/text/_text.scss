@@ -5,13 +5,18 @@
 }
 
 @mixin body-copy {
-  font-family: $font-body;
-  font-size: 0.9rem;
-  line-height: 1.6em;
+  font-family: $font-primary;
+  line-height: 1.25em;
+}
+
+@mixin size($px-size) {
+  font-size: #{$px-size}px;
+  font-size: #{$px-size/16}rem;
 }
 
 body {
-  color: $gray;
+  color: $black;
+  font-size: 100%;
 
   @include body-copy;
 }

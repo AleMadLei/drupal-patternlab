@@ -1,0 +1,8 @@
+headline:
+  "What? This is a <strong>headline</strong>"
+subheadline:
+  "This is a <em>subheadline</em>"
+url:
+    "https://www.pixelonion.com/"
+icon:
+    '<img class="cta__icon" src="https://www.pixelonion.com/sites/all/themes/pixelonion/images/po_mascot.png" />'
