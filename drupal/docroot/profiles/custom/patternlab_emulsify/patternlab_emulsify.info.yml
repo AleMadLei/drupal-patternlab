@@ -1,7 +1,7 @@
-name: 'Patternlab Using Particle'
-description: 'A custom configuration using the Particle system.'
+name: 'Patternlab Using Emulsify'
 type: profile
-version: 8.x
+description: 'A custom configuration using Emulsify for theming.'
+version: 1
 core: '8.x'
 dependencies:
   - block
@@ -12,6 +12,7 @@ dependencies:
   - features
   - toolbar
   - twig_tweak
+  - unified_twig_ext
 themes:
-  - bartik
+  - emulsify_sample
   - seven
