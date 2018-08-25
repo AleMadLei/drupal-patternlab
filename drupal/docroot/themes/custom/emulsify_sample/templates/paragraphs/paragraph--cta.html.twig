@@ -1,0 +1,19 @@
+{# Icon url initialization. #}
+{% set icon_url = content.field_icon.0['#item'].entity.uri.value %}
+{% if content.field_icon.0['#image_style'] %}
+  {% set icon_url = icon_url|image_style(content.field_icon.0['#image_style']) %}
+{% endif %}
+{% set icon_url = file_url(icon_url) %}
+{% set icon = {
+  '#markup': include('@atoms/04-images/00-image/_image.twig', {
+    image_base_class: 'icon',
+    image_blockname: 'cta',
+    img_src: icon_url,
+  }),
+} %}
+{% include "@organisms/cta/standard-cta.twig" with {
+  headline: content.field_headline,
+  subheadline: content.field_subheadline,
+  url: content.field_link.0['#url'].toString(),
+  icon: icon,
+} %}
