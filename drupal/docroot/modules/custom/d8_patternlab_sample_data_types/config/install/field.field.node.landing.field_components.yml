@@ -5,6 +5,7 @@ dependencies:
     - field.storage.node.field_components
     - node.type.landing
     - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.cta_image_text
   module:
     - entity_reference_revisions
 id: node.landing.field_components
@@ -23,8 +24,12 @@ settings:
     negate: 0
     target_bundles:
       cta: cta
+      cta_image_text: cta_image_text
     target_bundles_drag_drop:
       cta:
         enabled: true
         weight: 2
+      cta_image_text:
+        enabled: true
+        weight: 4
 field_type: entity_reference_revisions

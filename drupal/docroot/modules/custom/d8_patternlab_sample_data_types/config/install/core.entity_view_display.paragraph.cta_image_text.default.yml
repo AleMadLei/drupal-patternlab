@@ -10,65 +10,49 @@ dependencies:
     - field.field.paragraph.cta_image_text.field_link
     - paragraphs.paragraphs_type.cta_image_text
   module:
-    - color_field
     - image
     - link
-    - options
     - text
 id: paragraph.cta_image_text.default
 targetEntityType: paragraph
 bundle: cta_image_text
 mode: default
 content:
-  field_background_color:
-    weight: 5
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_content:
-    weight: 3
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_headline:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_image:
     weight: 0
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  field_image_position:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_link:
-    weight: 2
-    label: above
+    weight: 3
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     type: link
     region: content
-hidden: {  }
+hidden:
+  field_background_color: true
+  field_image_position: true
