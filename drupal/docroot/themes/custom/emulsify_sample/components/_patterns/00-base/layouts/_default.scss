@@ -9,9 +9,7 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 .header,
 .main,
 .footer {
-  @include wrapper;
-
-  margin-bottom: 4em;
+  //
 }
 
 //
@@ -20,9 +18,7 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 //
 
 .main {
-  @include large {
-    display: flex;
-  }
+  //
 }
 
 .main-sidebar {

@@ -1,9 +1,12 @@
-.main {
-  @include wrapper;
-
-  display: block; // Fix for IE weirdness
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: url(//www.pixelonion.com/sites/all/themes/pixelonion/images/po_bg.jpg);
 }
+
+.main {
+  display: block; // Fix for IE weirdness
+}
+

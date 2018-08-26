@@ -1,0 +1,11 @@
+headline:
+  "This is the main headline"
+image_url:
+  "https://placeimg.com/1200/500"
+link:
+  title:
+    "This is a button"
+  url:
+    "http://www.google.com"
+text:
+  "This is my content"

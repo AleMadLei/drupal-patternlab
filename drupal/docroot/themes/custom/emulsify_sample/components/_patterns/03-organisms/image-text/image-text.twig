@@ -1,0 +1,30 @@
+<div class="image-text image-text--left paragraph"{% if background_color %} style="background-color: {{ background_color }};"{% endif %}>
+  <div class="image-text__image-wrapper">
+    {% include '@atoms/04-images/00-image/_image.twig' with {
+      image_base_class: 'image',
+      image_blockname: 'image-text',
+      img_src: image_url,
+    } %}
+  </div>
+  <div class="image-text__text-wrapper">
+    {% include '@atoms/02-text/00-headings/_heading.twig' with {
+      heading_level: 2,
+      heading_base_class: 'headline',
+      heading_blockname: 'image-text',
+      heading: headline,
+    } %}
+    <div class="image-text__text">
+      {{ text }}
+    </div>
+    {% if link %}
+    <div class="image-text__link-wrapper">
+        {% include '@atoms/01-links/link/link.twig' with {
+          link_base_class: 'link',
+          link_blockname: 'image-text',
+          link_content: link.title,
+          link_url: link.url,
+        } %}
+    </div>
+    {% endif %}
+  </div>
+</div>
