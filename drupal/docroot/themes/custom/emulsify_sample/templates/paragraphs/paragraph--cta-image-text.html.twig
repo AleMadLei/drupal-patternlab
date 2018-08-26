@@ -1,0 +1,17 @@
+{% set side = paragraph.field_image_position.0.value != 'left' ? '--right' : ''  %}
+{% set image_url = content.field_image.0['#item'].entity.uri.value %}
+{% if content.field_image.0['#image_style'] %}
+  {% set image_url = image_url|image_style(content.field_icon.0['#image_style']) %}
+{% endif %}
+{% set image_url = file_url(image_url) %}
+{# Pattern Lab template. #}
+{% include "@organisms/image-text/image-text" ~ side ~ ".twig" with {
+  background_color: paragraph.field_background_color.0.value.color,
+  image_url: image_url,
+  headline: content.field_headline,
+  link: not content.field_link.0['#url'] ? '' : {
+    url: content.field_link.0['#url'].toString(),
+    title: content.field_link.0['#title'],
+  },
+  text: content.field_content,
+} %}
