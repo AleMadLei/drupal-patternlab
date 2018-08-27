@@ -9,12 +9,11 @@ MAINTAINER Alejandro Madrigal Leiva <me@alemadlei.tech>
 # Changes to the root user just to make sure we don't get any errors due to permissions.
 USER root
 
-# Copy of the NodeJS dockerfile.
 ENV NODE_VERSION 8.11.4
 
-RUN \
-    apk add --no-cache \
-        vim \
+RUN addgroup -g 1000 node \
+    && adduser -u 1000 -G node -s /bin/sh -D node \
+    && apk add --no-cache \
         libstdc++ \
     && apk add --no-cache --virtual .build-deps \
         binutils-gold \
@@ -75,6 +74,9 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
   && apk del .build-deps-yarn
+
+RUN apk update && \
+    apk add python vim
 
 # Runs PHP
 USER wodby

@@ -26,7 +26,7 @@ services:
     labels:
       - 'traefik.backend=node'
       - 'traefik.port=3000'
-      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL},Host:node.${PROJECT_BASE_URL}'
+      - 'traefik.frontend.rule=Host:node.${PROJECT_BASE_URL}'
 
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
