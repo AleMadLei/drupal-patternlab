@@ -21,8 +21,8 @@ services:
         NODE_TAG: "${NODE_TAG}"
         PHP_TAG: "${PHP_TAG}"
     container_name: "${PROJECT_NAME}_php"
-    ports:
-      - "3000:3000"
+    expose:
+      - 3000
     labels:
       - 'traefik.backend=node'
       - 'traefik.port=3000'
