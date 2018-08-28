@@ -76,7 +76,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && apk del .build-deps-yarn
 
 RUN apk update && \
-    apk add python vim
+    apk add python vim alpine-sdk
 
 # Runs PHP
 USER wodby
