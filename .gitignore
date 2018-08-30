@@ -40,3 +40,9 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+# Drupal core and contributed modules and themes.
+drupal/docroot/modules/contrib
+drupal/docroot/themes/contrib
+drupal/docroot/core
+drupal/profiles/custom
