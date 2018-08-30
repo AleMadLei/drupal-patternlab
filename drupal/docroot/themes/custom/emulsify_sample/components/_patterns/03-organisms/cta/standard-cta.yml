@@ -1,10 +1,8 @@
 headline:
-  "What? This is a <strong>headline</strong>"
+  "Sample headline <strong>with HTML</strong>"
 subheadline:
-  "This is a <em>subheadline</em>"
+  "Sample subheadline <em>with HTML</em>"
 url:
-  "https://www.pixelonion.com/"
+  "https://www.google.com"
 icon:
-  '<img class="cta__icon" src="https://www.pixelonion.com/sites/all/themes/pixelonion/images/po_mascot.png" />'
-text:
-  ''
+  '<img class="cta__icon" src="https://placeimg.com/200/250" />'

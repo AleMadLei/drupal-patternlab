@@ -1,0 +1,110 @@
+<h2>1) Primary color</h2>
+<p>A primary color is the color displayed most frequently across screens and components. This portion usually is brand identity color.</p>
+<p><strong>At a glance</strong></p>
+<ul class="sg-colors">
+  <li>
+    <div class="sg-colors__sample" style="background: {{colors.primary.hex}};"></div>
+    <div class="sg-info">
+      <span>{{colors.primary.description}}</span> <br/>
+      <code>{{colors.primary.name}}</code>
+    </div>
+  </li>
+</ul>
+<h2>1.1) Primary Color Details</h2>
+<h3>{{ colors.primary.description }}</h3>
+<p>
+  <span class="hex">HEX: {{ colors.primary.hex }}</span> | RGB: {{ colors.primary.rgb }}
+</p>
+<h2>2) Secondary color</h2>
+<p>A secondary color is used to accent select parts of the design. It can be complementary or analogous to the primary
+  color, but it should not simply be a light or dark variation of your primary color. It should contrast with elements
+  that surround it and be applied sparingly as an accent.</p>
+<p>Using a secondary color is optional. It’s not necessary if there are multiple variations of the primary color to
+  accent elements.</p>
+
+<div class="pl-note">
+  <p><strong>Secondary colors are best used for:</strong></p>
+  <ul class="pl-note__list">
+    <li>Buttons, floating action buttons, and button text</li>
+    <li>Selection controls, buttons, and sliders</li>
+    <li>Text fields, cursors, and text selection</li>
+    <li>Links</li>
+    <li>Headlines</li>
+    <li>Progress bars</li>
+  </ul>
+</div>
+
+<p><strong>At a glance</strong></p>
+<ul class="sg-colors">
+  <li>
+    <div class="sg-colors__sample" style="background: {{colors.secondary.hex}};"></div>
+    <div class="sg-info">
+      <span>{{colors.secondary.description}}</span> <br/>
+      <code>{{colors.secondary.name}}</code>
+    </div>
+  </li>
+</ul>
+<h2>2.1) Secondary Color Details</h2>
+<h3>{{ colors.secondary.description }}</h3>
+<p>
+  <span class="hex">HEX: {{ colors.secondary.hex }}</span> | RGB: {{ colors.secondary.rgb }}
+</p>
+
+<ul class="sg-colors">
+  {% for item in items %}
+    <li>
+      <div class="sg-colors__sample" style="background: {{item.value}};"></div>
+      <div class="sg-info">
+        <span>{{item.value}}</span> <br/>
+        <code>{{item.name}}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>3) Grey colors</h2>
+<p>Grey colors are used for text, icons, backgrounds, lines and borders.</p>
+<p><strong>At a glance</strong></p>
+<ul class="sg-colors">
+  {% for item in colors.greys %}
+    <li>
+      <div class="sg-colors__sample" style="background: {{item.hex}};"></div>
+      <div class="sg-info">
+        <span>{{item.description}}</span> <br/>
+        <code>{{item.name}}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>4.1) Colors details</h2>
+{% for item in colors.greys %}
+  <h3>{{ item.description }}</h3>
+  <p>
+    <span class="hex">HEX: {{ item.hex }}</span> | RGB: {{ item.rgb }}
+  </p>
+{% endfor %}
+
+
+<h2>4) Support Colors</h2>
+<p>Support colors are used for giving feedback, such as alert messages and form elements. Input fields, for example, can get positive and negative feedback, whereas alert messages can have warning feedback.</p>
+<p><strong>At a glance</strong></p>
+<ul class="sg-colors">
+  {% for item in colors.support %}
+    <li>
+      <div class="sg-colors__sample" style="background: {{item.hex}};"></div>
+      <div class="sg-info">
+        <span>{{item.description}}</span> <br/>
+        <code>{{item.name}}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>4.1) Colors details</h2>
+{% for item in colors.support %}
+  <h3>{{ item.description }}</h3>
+  <p>
+    <span class="hex">HEX: {{ item.hex }}</span> | RGB: {{ item.rgb }}
+  </p>
+{% endfor %}
