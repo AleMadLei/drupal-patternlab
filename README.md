@@ -87,6 +87,12 @@ However, if you are running this locally, it will depend on how you set it up. W
 Pattern Lab, it should automatically open the browser on the styleguide. Most likely it should 
 be something like http://127.0.0.1:3000/pattern-lab/public
 
+## Important note
+
+It seems that when yarn install is executed, the Pattern Lab config file resets and disables HTML output. To enable it
+again reset the project (git reset --hard HEAD) or checkout the specific file. You can confirm that the file changed
+by running git status.
+
 ## Questions or issues
 
 Feel free to open an issue and I will take a look when I have time.
