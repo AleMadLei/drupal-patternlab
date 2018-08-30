@@ -79,9 +79,6 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
 RUN apk update && \
     apk add python vim alpine-sdk
 
-# Updates Yarn.
-RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
-
 # Runs PHP
 USER wodby
 CMD ["sudo", "-E", "LD_PRELOAD=/usr/lib/preloadable_libiconv.so", "php-fpm"]
